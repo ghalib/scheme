@@ -1,0 +1,29 @@
+# Ghalib Suleiman
+
+Run 'make' to compile, then execute ./scheme.  A required dependency
+is the Boost.shared_ptr library.
+
+This is an arithmetic Scheme interpreter, i.e. operations are
+restricted to basic arithmetic.  Mostly adapted from the interpreter
+presented in chapter 4 of SICP.
+
+Available operations are: define set! + - / *
+
+Example usage:
+>(define x 2)
+2
+>(define y 5)
+5
+>(* x (* y (+ 5 x)))
+70
+>(set! x 5)
+5
+>(+ x y)
+10
+
+Type 'quit' at the prompt to exit.
+
+Comments about the implementation are found in the source, mostly in
+the header files.
+
+Be careful as the REPL has no garbage collection implemented.
